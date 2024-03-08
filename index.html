@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./styles/reset.css">
+  <link rel="stylesheet" type="text/css" href="./styles/fonts.css">
+  <link rel="stylesheet" type="text/css" href="./styles/global.css">
+  <link rel="stylesheet" type="text/css" href="styles/lab_four_starter.css">
+  <link rel="stylesheet" type="text/css" href="styles/lab_four_myfile.css">
+  <script src="./main.js"></script>
+  <title>Common Website Features</title>
+</head>
+
+<body>
+  <section class="hero-container">
+    <!-- Remove and add hero banner HTML -->
+    <div class="hero-image">
+        <div class="hero-text">
+      <h1>aerial cafe.</h1>
+      <p>A small local cafe to study and chat</p>
+      <button>Our Menu</button>
+    </div>
+    </div>
+  </section>
+
+  <section class="container content-container">
+    <!-- Remove and add content HTML -->
+    <div class="row">
+      <div class="left">
+        <img src="assets/content_photo.jpg" alt="asfsfa">
+    </div>
+    <div class="right">
+      <div class="content">
+        <h2>Our Story</h2>
+        <p>It all started as a group of friends who wanted to open a small little cafe together. We want to bring locals around the area to socialize, and for students to have a great place to push through their busy semesters. It is a place to bring people together.</p>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <section class="container accordion-container">
+    <h2 class="accordion-header">F&Q</h2>
+    <!-- Remove and add accordion HTML -->
+    <button class="accordion">Do you have free Wi-fi?</button>
+    <div class="panel">
+      <p>Yes we do! Check with a staff member to get the password for the Wi-fi.</p>
+    </div>
+    
+    <button class="accordion">Are pets allowed on the premise?</button>
+    <div class="panel">
+      <p>Pets are not allowed within the store, but feel free to use our outside patio.</p>
+    </div>
+    
+    <button class="accordion">Is your coffee locally sourced?</button>
+    <div class="panel">
+      <p>Yes it is! Click more on our About Us page to learn more about how we run as a business.</p>
+    </div>
+  </section>
+
+  <script> //Javascript for the accordion in html as it did not work in main.js//
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+    </script>
+
+  <section class="footer-container">
+    <!-- Remove and add footer HTML -->
+    <footer class="footer">
+      <div class="footer-column">
+          <!-- Information -->
+          <h3>Contact Information</h3>
+          <p>123 SAIT Street,<br>Calgary, Canada</p>
+          <p>Email: aerial_cafe@example.com<br>Phone: +123456789</p>
+      </div>
+      <div class="footer-column">
+          <!-- Link List Menu -->
+          <h3>Quick Links</h3>
+          <ul>
+              <li><a href="#">Home &#8594;</a></li>
+              <li><a href="#">About Us &#8594;</a></li>
+              <li><a href="#">Services &#8594;</a></li>
+              <li><a href="#">Contact Us &#8594;</a></li>
+          </ul>
+      </div>
+      <div class="footer-column">
+          <!-- Google Maps Embed -->
+          <h3>Location</h3>
+          <div class="iframe-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6381.328166540631!2d-114.09423312488117!3d51.0645004579289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53716f927202bf3f%3A0x16877e49fcc8dbcb!2sStan%20Grad%20Centre!5e0!3m2!1sen!2sca!4v1709871450654!5m2!1sen!2sca" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+      </div>
+      <div class="copyright">
+          <!-- Copyright -->
+          <p id="elementFooter">	&#169; <span id="year"> 2021</span> ariel cafe. All rights reserved</p>  <!-- date is changed to 2021 to see if the js code works to name the date dynamic -->
+      </div>
+  </footer>
+  </section>
+
+
+</body>
+</html>
